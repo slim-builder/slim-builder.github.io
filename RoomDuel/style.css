@@ -1,0 +1,41 @@
+.text-white {
+  color: white;
+}
+
+.bg-red {
+  background-color: lightcoral;
+}
+
+.bg-blue {
+  background-color: #00ccff;
+}
+
+.bg-green {
+  background-color: lightgreen;
+}
+
+.pocket-div {
+  background-color: #ff9933;
+  border-radius: 20px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.text-top-align {
+  vertical-align: top;
+}
+
+.row {
+  margin: 10px 0 10px 0;
+  width: 100%;
+}
+
+.status {
+  padding-bottom: 10px;
+  border-radius: 20px;
+}
+
+.duel-status {
+  font-size: 1.5em;
+  height: 500px;
+}

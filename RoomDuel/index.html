@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link type="text/css" href="style.css" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js">
+        </script>
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js">
+        </script>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous">
+        </script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="icon" href="../../favicon.ico">
+        <title>
+            Room Duel
+        </title>
+    </head>
+    <body>
+        <div class="jumbotron text-center">
+          <h1>Room Duel</h1>
+          <h3>Browser-based game with no server-side interaction</h3>
+        </div>
+        <div class="text-center">
+        <h3 class="subtitle">Goal:</h3>
+        <p>The goal of the game is to find the evil wizard and defeat him in a duel.</p>
+        </div>
+        <div class="container">
+        <h3 class="text-center">How the Game Works:</h3>
+
+        <p>
+            Both you and the evil wizard are trapped in a huge mansion with many rooms filled with magical items which can help you or destroy you.
+        </p>
+        <br />
+        <p>
+            You start the game in a random room with a magic wand which can shoot fireballs.  The evil wizard will start in a random room with a magic wand which can shoot lightning bolts.  You and the wizard may pick up any magic items in any of the rooms that you occupy during the game.  After each clock cycle, both you and the evil wizard will jump to a randomly selected room which must be adjacent to the rooms that you both previously occupied.
+        </p>
+        <br />
+        <p>
+            If you and the evil wizard happen to land in the same room, a duel between the two of you will begin.  The duel will be turn-based with you making the first move.  You can use any magic items that you're carrying to attack the evil wizard or defend yourself from an attack.  The evil wizard can also use his items to attack and defend.  The game ends when one of you faints.
+        </p>
+        </div>
+        <div class="container">
+          <div class="row">
+            <input type="button" class="btn btn-danger active center-block reset" value="Restart Game">
+          </div>
+          <div class="row text-top-align">
+            <div class="col-xs-12 col-sm-4 bg-blue status">
+              <h1>Player</h1>
+              <h3>Hit Points: <span id="player_hp"></span>
+              </h3>
+              <div class="pocket-div" id="pocket_outer_div">
+                <h3>Player's Pocket</h3>
+                <div id="pocket"></div>
+              </div>
+              <input type="button" class="btn btn-primary active" id="turn" value="Attack!">
+            </div>
+            <div class="col-xs-12 col-sm-4 bg-red status">
+              <h1 class="sublabel">Opponent</h1>
+              <h3>Hit Points: <span id="opponent_hp"></span>
+              </h3>
+            </div>
+            <div class="col-xs-12 col-sm-4 bg-green status duel-status">
+              <h1 class="sublabel">Current Duel Status:</h1>
+              <div class="status_info" id="o_status_info"></div>
+              <br/>
+              <div class="status_info" id="p_status_info"></div>
+              <div id="game_over_info"></div>
+            </div>
+          </div>
+          <br/>
+          <div class="row">
+            <input type="button" class="btn btn-danger active center-block reset" value="Restart Game">
+          </div>
+        </div>
+      <script src="duel.js" type="text/javascript"></script>
+    </body>
+</html>
